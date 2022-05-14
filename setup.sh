@@ -40,4 +40,4 @@ touch database/database.sqlite
 php artisan optimize:clear
 npm run build
 
-echo -e "\n${BLUE}Tudo certo meu parceiro! 😎${ENDCOLOR}"
+echo "\n${BLUE}Tudo certo meu parceiro! 😎${ENDCOLOR}"
