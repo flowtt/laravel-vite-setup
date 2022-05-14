@@ -9,12 +9,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/matuniverso/lv-setup/main/
 ## Formatting (package.json)
 
 ```json
-{
-  "scripts": {
+"scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint --ext .ts,.vue --fix resources",
     "fix": "prettier --write resources/**/*.{ts,vue}"
-  }
 }
 ```
