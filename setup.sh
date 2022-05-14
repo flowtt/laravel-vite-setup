@@ -2,7 +2,10 @@
 
 # Colors
 BLUE="\e[34m"
+GREEN="\e[32m"
 ENDCOLOR="\e[0m"
+
+echo "\n${BLUE}Setting up your project...${ENDCOLOR}"
 
 # laravel-vite
 npx @preset/cli apply laravel:inertia --no-pest
@@ -16,6 +19,8 @@ vendor/bin/php-cs-fixer fix
 # node install
 npm install -D \
     eslint \
+    prettier \
+    eslint-config-prettier \
     eslint-config-standard \
     eslint-plugin-import \
     eslint-plugin-n \
@@ -23,21 +28,19 @@ npm install -D \
     eslint-plugin-vue \
     @typescript-eslint/eslint-plugin \
     @typescript-eslint/parser \
-    eslint-config-prettier \
-    prettier \
-    @headlessui/vue \
-    @tailwindcss/forms
+    @inertiajs/progress \
+    @tailwindcss/forms \
+    @headlessui/vue
 
-curl -O https://raw.githubusercontent.com/matuniverso/lv-setup/main/.eslintrc.json
-curl -O https://raw.githubusercontent.com/matuniverso/lv-setup/main/.prettierrc
+curl -O https://raw.githubusercontent.com/matuniverso/lv-setup/main/.eslintrc.json \
+     -O https://raw.githubusercontent.com/matuniverso/lv-setup/main/.prettierrc
+
 npx eslint --ext .ts,.vue --fix resources
 npx prettier --write resources/**/*.{ts,vue}
-sh -c "$(sed 's/plugins:\ \[]/plugins:\ \[require('@tailwindcss\\/forms')]/g' tailwind.config.js)"
 
 # finishing
-rm -rf tests/Unit
-touch database/database.sqlite
 php artisan optimize:clear
 npm run build
 
-echo "\n${BLUE}Tudo certo meu parceiro! 😎${ENDCOLOR}"
+echo "\n${GREEN}All done bro! 😎${ENDCOLOR}"
+echo "${GREEN}Execute \"php artisan serve\" to see your app\!${ENDCOLOR}"
