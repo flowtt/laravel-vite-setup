@@ -32,7 +32,7 @@ curl -O https://raw.githubusercontent.com/matuniverso/lv-setup/main/.eslintrc.js
 curl -O https://raw.githubusercontent.com/matuniverso/lv-setup/main/.prettierrc
 npx eslint --ext .ts,.vue --fix resources
 npx prettier --write resources/**/*.{ts,vue}
-sed 's/plugins:\ \[]/plugins:\ \[require('@tailwindcss\\/forms')]/g' tailwind.config.js
+sh -c "$(sed 's/plugins:\ \[]/plugins:\ \[require('@tailwindcss\\/forms')]/g' tailwind.config.js)"
 
 # finishing
 rm -rf tests/Unit
