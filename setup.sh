@@ -12,7 +12,7 @@ npx @preset/cli apply laravel:inertia --no-pest
 
 # composer install
 composer require --dev -n friendsofphp/php-cs-fixer
-curl -O https://raw.githubusercontent.com/matuniverso/lv-setup/main/.php-cs-fixer.php
+curl -O https://raw.githubusercontent.com/matphp/lv-setup/main/.php-cs-fixer.php
 echo .php-cs-fixer.cache >> .gitignore
 vendor/bin/php-cs-fixer fix
 
@@ -32,8 +32,8 @@ npm install -D \
     @tailwindcss/forms \
     @headlessui/vue
 
-curl -O https://raw.githubusercontent.com/matuniverso/lv-setup/main/.eslintrc.json \
-     -O https://raw.githubusercontent.com/matuniverso/lv-setup/main/.prettierrc
+curl -O https://raw.githubusercontent.com/matphp/lv-setup/main/.eslintrc.json \
+     -O https://raw.githubusercontent.com/matphp/lv-setup/main/.prettierrc
 
 npx eslint --ext .ts,.vue --fix resources
 npx prettier --write resources/**/*.{ts,vue}
