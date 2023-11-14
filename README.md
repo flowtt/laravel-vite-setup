@@ -1,9 +1,9 @@
-# lv-setup
+# laravel-vite-setup
 
 ## Install
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/matuniverso/lv-setup/main/setup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/matphp/lv-setup/main/setup.sh)"
 ```
 
 ## Post-install
