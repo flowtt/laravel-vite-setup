@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/flowtt/lv-setup/main/setup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/flowtt/laravel-vite-setup/main/setup.sh)"
 ```
 
 ## Post-install
